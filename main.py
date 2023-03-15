@@ -72,39 +72,30 @@ def create_and_train_model(epo, f_layer, s_layer, t_layer, d_layers, opti, act1,
 def train(e, f, s, t, d, act1, act2, act3, act4):
     create_and_train_model(e, f, s, t, d, 'SGD', act1, act2, act3, act4)
     create_and_train_model(e, f, s, t, d, 'RMSprop', act1, act2, act3, act4)
-    create_and_train_model(e, f, s, t, d, 'Adagrad', act1, act2, act3, act4)
-    create_and_train_model(e, f, s, t, d, 'Adadelta', act1, act2, act3, act4)
+    create_and_train_model(e, f, s, t, d, 'Adam', act1, act2, act3, act4)
 
 
-train(12, 32, 64, 128, 128, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 32, 64, 128, 128, 'ELU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 32, 64, 128, 128, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
-train(12, 32, 64, 128, 128, 'ReLU', 'ReLU', 'ELU', 'ReLU')
-train(12, 32, 64, 128, 128, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
+train(7, 32, 64, 128, 128, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
+train(8, 32, 64, 128, 128, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
+train(8, 32, 64, 128, 128, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
 
-train(12, 32, 32, 32, 32, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 32, 32, 32, 32, 'ELU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 32, 32, 32, 32, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
-train(12, 32, 32, 32, 32, 'ReLU', 'ReLU', 'ELU', 'ReLU')
-train(12, 32, 32, 32, 32, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
+train(8, 32, 32, 32, 32, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
+train(8, 32, 32, 32, 32, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
+train(8, 32, 32, 32, 32, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
 
-train(12, 32, 64, 128, 512, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 32, 64, 128, 512, 'ELU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 32, 64, 128, 512, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
-train(12, 32, 64, 128, 512, 'ReLU', 'ReLU', 'ELU', 'ReLU')
-train(12, 32, 64, 128, 512, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
+train(7, 32, 64, 128, 512, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
+train(8, 32, 64, 128, 512, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
+train(8, 32, 64, 128, 512, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
 
-train(12, 64, 128, 512, 1024, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 64, 128, 512, 1024, 'ELU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 64, 128, 512, 1024, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
-train(12, 64, 128, 512, 1024, 'ReLU', 'ReLU', 'ELU', 'ReLU')
-train(12, 64, 128, 512, 1024, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
+train(7, 64, 128, 512, 1024, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
+train(8, 64, 128, 512, 1024, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
+train(8, 64, 128, 512, 1024, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
 
-train(12, 512, 128, 64, 32, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 512, 128, 64, 32, 'ELU', 'ReLU', 'ReLU', 'ReLU')
-train(12, 512, 128, 64, 32, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
-train(12, 512, 128, 64, 32, 'ReLU', 'ReLU', 'ELU', 'ReLU')
-train(12, 512, 128, 64, 32, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
+train(7, 512, 128, 64, 32, 'ReLU', 'ReLU', 'ReLU', 'ReLU')
+train(8, 512, 128, 64, 32, 'ELU', 'LeakyReLU', 'ReLU', 'ReLU')
+train(8, 512, 128, 64, 32, 'ReLU', 'ReLU', 'ELU', 'LeakyReLU')
+# jak model sie overfituje to można pozmieniać batch size
+
 
 
 
