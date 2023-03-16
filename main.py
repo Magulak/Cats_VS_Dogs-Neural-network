@@ -1,18 +1,19 @@
 # https://www.kaggle.com/c/dogs-vs-cats
 
-# def get_available_devices():
-#     local_device_protos = device_lib.list_local_devices()
-#     return [x.name for x in local_device_protos]
-#
-#
-# print(get_available_devices())
-# print(tensorflow.test.is_built_with_cuda())
-# my output was => ['/device:CPU:0']
-# good output must be => ['/device:CPU:0', '/device:GPU:0']
-
 
 import tensorflow
 import time
+from tensorflow.python.layers import devive_lib
+def get_available_devices():
+    local_device_protos = device_lib.list_local_devices()
+    return [x.name for x in local_device_protos]
+
+
+print(get_available_devices())
+print(tensorflow.test.is_built_with_cuda())
+# my output was => ['/device:CPU:0']
+# good output must be => ['/device:CPU:0', '/device:GPU:0']
+
 
 dir_path = r'G:/Scripts/Cats_VS_Dogs/kagglecatsanddogs_5340/PetImages'
 
